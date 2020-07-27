@@ -1,4 +1,4 @@
-# # LogX: Simple and concise logs for Flutter
+# LogX: Simple and concise logs for Flutter
 
 ![Pub Version](https://img.shields.io/pub/v/logx)
 
