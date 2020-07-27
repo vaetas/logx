@@ -1,0 +1,19 @@
+name: logx
+description: Simple and concise logs for Dart/Fluttre
+version: 0.0.1
+author: Vojtech Pavlovsky
+homepage: https://github.com/vaetas/logx
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
