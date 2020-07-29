@@ -1,6 +1,6 @@
 name: logx
-description: Simple and concise logs for Dart/Flutter
-version: 0.0.1
+description: Simple and concise logs for Dart/Flutter built on top of developer package.
+version: 0.0.2
 homepage: https://github.com/vaetas/logx
 
 environment:
