@@ -4,6 +4,8 @@
 
 LogX adds extends method `log` from `dart:developer` package to add useful features, namely mixins and static methods.
 
+![Screenshot](screenshot.png)
+
 ## Mixin
 
 You can use `LogMixin` to easily include log methods into any class. With mixin name of the context is automatically set to runtime type of current class.
