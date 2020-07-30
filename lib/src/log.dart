@@ -3,7 +3,7 @@ import 'dart:developer' as dev;
 const _kLogName = 'log';
 
 void _logTime(
-  dynamic message, {
+  Object message, {
   String name,
   Object error,
   StackTrace stackTrace,
@@ -21,13 +21,13 @@ void _logTime(
 class Log {
   /// Simple debug log.
   static void d(
-    dynamic message, {
+    Object message, {
     String name,
     Object error,
     StackTrace stackTrace,
   }) {
     dev.log(
-      message,
+      '$message',
       name: _formatName(name ?? _kLogName),
       error: error,
       stackTrace: stackTrace,
@@ -36,13 +36,13 @@ class Log {
 
   /// Debug print which adds timestamp to log.
   static void t(
-    dynamic message, {
+    Object message, {
     String name,
     Object error,
     StackTrace stackTrace,
   }) {
     _logTime(
-      message,
+      '$message',
       name: _formatName(name ?? _kLogName),
       error: error,
       stackTrace: stackTrace,
@@ -61,23 +61,28 @@ class LogX {
 
   /// Instance of [LogX] is callable.
   void call(
-    dynamic message, {
+    Object message, {
     String name,
     Object error,
     StackTrace stackTrace,
   }) {
-    this.d(message);
+    this.d(
+      '$message',
+      name: name,
+      error: error,
+      stackTrace: stackTrace,
+    );
   }
 
   /// Simple debug output. When using mixin [name] is deduced from current class.
   void d(
-    dynamic message, {
+    Object message, {
     String name,
     Object error,
     StackTrace stackTrace,
   }) {
     dev.log(
-      message,
+      '$message',
       name: _formatName(name ?? (this.name ?? _kLogName)),
       error: error,
       stackTrace: stackTrace,
@@ -86,13 +91,13 @@ class LogX {
 
   /// Debug print which adds timestamp to log.
   void t(
-    dynamic message, {
+    Object message, {
     String name,
     Object error,
     StackTrace stackTrace,
   }) {
     _logTime(
-      message,
+      '$message',
       name: _formatName(name ?? (this.name ?? _kLogName)),
       error: error,
       stackTrace: stackTrace,

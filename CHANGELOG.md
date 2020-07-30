@@ -1,3 +1,7 @@
+## [0.0.4] - 2020-07-30
+
+* Convert message to string.
+
 ## [0.0.3] - 2020-07-29
 
 * Add screenshot to README.

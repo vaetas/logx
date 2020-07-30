@@ -19,7 +19,7 @@ class ExampleApp extends StatelessWidget with LogMixin {
             children: <Widget>[
               RaisedButton(
                 onPressed: () {
-                  log.t('Hello world');
+                  log('Hello world');
                 },
                 child: Text('Log!'),
               ),
