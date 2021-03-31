@@ -1,6 +1,6 @@
-import 'log.dart';
+import 'package:logx/src/log.dart';
 
-/// Add [LogX] instance to any class. Log [name] is se to class type.
+/// Add [Logger] instance to any class. [Logger.name] is set to class type.
 mixin LogMixin on Object {
-  LogX get log => LogX(this.runtimeType);
+  Logger get logger => Logger(runtimeType.toString());
 }
