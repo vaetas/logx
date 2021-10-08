@@ -1,10 +1,10 @@
 name: logx
 description: Simple and concise logs for Dart/Flutter built on top of developer package.
-version: 0.0.4
+version: 0.1.0
 homepage: https://github.com/vaetas/logx
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:

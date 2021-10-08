@@ -4,15 +4,15 @@ const _kLogName = 'log';
 
 void _logTime(
   Object message, {
-  String name,
-  Object error,
-  StackTrace stackTrace,
+  String? name,
+  Object? error,
+  StackTrace? stackTrace,
 }) {
   final now = DateTime.now();
 
   dev.log(
     '${now.toIso8601String()} | $message',
-    name: name,
+    name: name ?? _kLogName,
     error: error,
     stackTrace: stackTrace,
   );
@@ -22,9 +22,9 @@ class Log {
   /// Simple debug log.
   static void d(
     Object message, {
-    String name,
-    Object error,
-    StackTrace stackTrace,
+    String? name,
+    Object? error,
+    StackTrace? stackTrace,
   }) {
     dev.log(
       '$message',
@@ -37,9 +37,9 @@ class Log {
   /// Debug print which adds timestamp to log.
   static void t(
     Object message, {
-    String name,
-    Object error,
-    StackTrace stackTrace,
+    String? name,
+    Object? error,
+    StackTrace? stackTrace,
   }) {
     _logTime(
       '$message',
@@ -50,21 +50,21 @@ class Log {
   }
 
   static String _formatName(Object context) {
-    return context?.toString();
+    return context.toString();
   }
 }
 
 class LogX {
-  final Object name;
+  final Object? name;
 
   const LogX([this.name]);
 
   /// Instance of [LogX] is callable.
   void call(
     Object message, {
-    String name,
-    Object error,
-    StackTrace stackTrace,
+    String? name,
+    Object? error,
+    StackTrace? stackTrace,
   }) {
     this.d(
       '$message',
@@ -77,9 +77,9 @@ class LogX {
   /// Simple debug output. When using mixin [name] is deduced from current class.
   void d(
     Object message, {
-    String name,
-    Object error,
-    StackTrace stackTrace,
+    String? name,
+    Object? error,
+    StackTrace? stackTrace,
   }) {
     dev.log(
       '$message',
@@ -92,9 +92,9 @@ class LogX {
   /// Debug print which adds timestamp to log.
   void t(
     Object message, {
-    String name,
-    Object error,
-    StackTrace stackTrace,
+    String? name,
+    Object? error,
+    StackTrace? stackTrace,
   }) {
     _logTime(
       '$message',
@@ -105,6 +105,6 @@ class LogX {
   }
 
   static String _formatName(Object context) {
-    return context?.toString();
+    return context.toString();
   }
 }

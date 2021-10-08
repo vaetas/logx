@@ -17,7 +17,7 @@ class ExampleApp extends StatelessWidget with LogMixin {
         body: Container(
           child: Column(
             children: <Widget>[
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   log('Hello world');
                 },
